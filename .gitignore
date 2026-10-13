@@ -1,0 +1,19 @@
+# Entorno virtual
+.venv/
+
+# Cachés de Python y pytest
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Cobertura
+.coverage
+htmlcov/
+coverage.xml
+
+# macOS
+.DS_Store
+__MACOSX/
+
+# Salidas generadas por las CLI (se pueden regenerar)
+salida/

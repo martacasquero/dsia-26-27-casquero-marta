@@ -1,0 +1,28 @@
+[project]
+name = "dsia-26-27-casquero-marta"
+version = "0.1.0"
+description = "Proyecto I: pipeline de calidad de datos (carga, validación, métricas y CLI) con tests y CI"
+readme = "README.md"
+authors = [
+    { name = "Marta Casquero" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+markers = [
+    "integration: tests que usan el CSV real de data/ (más lentos)",
+]
+
+[tool.coverage.run]
+omit = ["tests/*"]
